@@ -57,11 +57,11 @@ body {
 }
 .selected-btn {
   background-color: transparent;
-  color: rgb(40, 140, 221);
+  color: rgb(40, 140, 221) !important;
   border-width: 0;
   text-decoration: underline;
   text-underline-offset: 0.3em;
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .btn {
   background-color: transparent;
@@ -102,11 +102,45 @@ body {
     color: white;
   }
 
+  .drag-icon {
+    color:rgb(40, 140, 221);
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .drag-icon:hover {
+    cursor: pointer;
+  }
+
+  .delete-icon {
+    color:rgb(40, 140, 221);
+    font-size: 18px;
+    margin-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .delete-icon:hover {
+    cursor: pointer;
+    animation: shake 0.4s;
+    font-size: 20px;
+    padding-bottom: 0;
+  }
+  
+  @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  
 .content {
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;
   padding-bottom: 10px;
   padding-top: 10px;
+  min-height: 300px;
   max-height: 400px;
   overflow-y: auto;
   
@@ -116,6 +150,12 @@ input::placeholder {
 }
 label {
   font-size: 18px;
+}
+.task-cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 .task-cont input[type="checkbox"] {
   display: none;
